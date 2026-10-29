@@ -1,9 +1,9 @@
-# Vector Trainer
+# ATC Trainer (Air Traffic Controller Trainer)
 
 *Practice drills for air traffic controller aptitude tests, right in your browser.*
 
 ATCO selection tests are demanding and timed, and good practice tools are
-scarce, expensive, or closed. Vector Trainer is meant to be the free,
+scarce, expensive, or closed. ATC Trainer is meant to be the free,
 open-source alternative: short timed exercises for the skills these tests look
 for — mental arithmetic under pressure, spatial orientation, short-term memory,
 multitasking and conflict detection. Every session gets a score, and your
@@ -86,7 +86,7 @@ No personal data is collected. Your results never leave your browser.
 
 ## Not an official test
 
-Vector Trainer is an independent practice tool. It isn't affiliated with,
+ATC Trainer is an independent practice tool. It isn't affiliated with,
 endorsed by, or derived from any official ATCO selection test or commercial
 test-prep product.
 
