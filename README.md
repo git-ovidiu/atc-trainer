@@ -1,85 +1,95 @@
 # Vector Trainer
 
-**Browser-based practice drills for air traffic controller (ATCO) aptitude tests.**
-
-Vector Trainer is an open-source web app with short, timed exercises that train
-the skills ATCO selection tests look for: mental arithmetic under pressure,
-spatial orientation, short-term memory, multitasking, and conflict detection.
-Each session is scored, and progress is tracked over time so you can see
-which skills are improving and which need work.
-
-> Status: **early development** — see [ROADMAP.md](./ROADMAP.md).
-
-## Why
+*Practice drills for air traffic controller aptitude tests, right in your browser.*
 
 ATCO selection tests are demanding and timed, and good practice tools are
-scarce, expensive, or closed. Vector Trainer aims to be a free, offline-capable,
-well-tested alternative with **original** exercises (no content copied from
-commercial test-prep products).
+scarce, expensive, or closed. Vector Trainer is meant to be the free,
+open-source alternative: short timed exercises for the skills these tests look
+for — mental arithmetic under pressure, spatial orientation, short-term memory,
+multitasking and conflict detection. Every session gets a score, and your
+progress is tracked over time so you can see which skills are improving and
+which still need work.
 
-## Planned drills
+All exercises are **original**; nothing is copied from commercial test-prep
+products. It is designed to work offline and to be well tested.
 
-| Drill | Skill trained | Description |
-|---|---|---|
-| **Mental Math** | Numerical speed | Timed arithmetic: speed/distance/time, fuel, altitude differences |
-| **Heading Finder** | Spatial orientation | Given a position and a target, pick the correct heading |
-| **Relative Position** | Spatial orientation | Rotate the frame of reference: "where is aircraft B from A's point of view?" |
-| **Callsign Memory** | Short-term memory | Remember callsigns, flight levels and squawk codes shown briefly |
-| **Conflict Watch** | Conflict detection | Aircraft move on a radar-style canvas; flag pairs that will lose separation |
-| **Dual Task** | Multitasking | Run a tracking task while answering math or memory prompts |
+**Project status:** early development. What's coming next is in the
+[roadmap](./ROADMAP.md).
 
-## Features (planned)
+---
 
-- Configurable difficulty and session length
-- Per-drill scoring: accuracy, reaction time, consistency
-- Progress history and charts, stored locally in the browser (no accounts, no server)
-- Works offline as an installable web app (PWA)
-- Keyboard-first controls, accessible color contrast, light and dark themes
+## The drills
 
-## Tech stack
+### Mental Math
+*Trains numerical speed.* Timed arithmetic built around aviation problems:
+speed/distance/time, fuel, and altitude differences.
 
-- **TypeScript** + **React** + **Vite**
-- **HTML Canvas** for radar-style drills
-- **Vitest** for unit tests, **Playwright** for end-to-end tests
-- **IndexedDB** for local progress storage
-- ESLint + Prettier
+### Heading Finder
+*Trains spatial orientation.* You get a position and a target and have to pick
+the correct heading.
 
-## Getting started
+### Relative Position
+*Trains spatial orientation.* Rotate the frame of reference and answer
+questions like "where is aircraft B from A's point of view?"
 
-> Setup instructions will be added once the app is scaffolded.
+### Callsign Memory
+*Trains short-term memory.* Callsigns, flight levels and squawk codes flash on
+screen briefly — then you recall them.
+
+### Conflict Watch
+*Trains conflict detection.* Aircraft move across a radar-style canvas; flag
+the pairs that are going to lose separation.
+
+### Dual Task
+*Trains multitasking.* Keep a tracking task going while answering math or
+memory prompts.
+
+## What else is planned
+
+You'll be able to set the difficulty and the length of a session. Each drill
+reports accuracy, reaction time and consistency. Your history and charts live
+in your own browser — there are no accounts and no server. The app can be
+installed as a PWA and keeps working offline. Controls are keyboard-first, with
+accessible color contrast and both a light and a dark theme.
+
+## Under the hood
+
+Written in TypeScript with React and Vite. Radar-style drills are drawn on an
+HTML canvas, and progress is saved in IndexedDB. Unit tests run on Vitest,
+end-to-end tests on Playwright, and the code is kept tidy with ESLint and
+Prettier.
+
+## Running it locally
+
+Detailed setup steps will follow once the app is scaffolded. The plan is:
 
 ```bash
-git clone https://github.com/<your-username>/vector-trainer.git
-cd vector-trainer
+git clone https://github.com/git-ovidiu/atc-trainer.git
+cd atc-trainer
 npm install
 npm run dev
 ```
 
-## Project structure (planned)
+## How the code will be organized
 
-```
-src/
-  drills/        # one folder per drill (logic + UI)
-  engine/        # timers, scoring, random generators (seeded)
-  storage/       # local progress persistence
-  components/    # shared UI
-  pages/         # home, drill runner, results, history
-tests/
-  unit/
-  e2e/
-docs/
-```
+- `src/drills/` — one folder per drill, holding its logic and its UI
+- `src/engine/` — timers, scoring and seeded random generators
+- `src/storage/` — saving progress locally
+- `src/components/` — UI pieces shared between drills
+- `src/pages/` — home, drill runner, results and history screens
+- `tests/unit/` and `tests/e2e/` — the two test suites
+- `docs/` — documentation
 
-## Privacy
+## A note on privacy
 
-Vector Trainer collects no personal data. All results stay in your own browser.
+No personal data is collected. Your results never leave your browser.
 
-## Disclaimer
+## Not an official test
 
-This is an independent practice tool. It is not affiliated with, endorsed by,
-or derived from any official ATCO selection test or commercial test-prep product.
+Vector Trainer is an independent practice tool. It isn't affiliated with,
+endorsed by, or derived from any official ATCO selection test or commercial
+test-prep product.
 
-## License
+---
 
-[MIT](./LICENSE) © 2026 Ovidiu Bunghez
-# atc-trainer
+Released under the [MIT License](./LICENSE). Copyright © 2026 Ovidiu Bunghez.
