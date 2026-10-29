@@ -1,51 +1,59 @@
-# Roadmap
+# Vector Trainer — release plan
 
-Milestones are ordered; items inside a milestone can be done in any order.
-Each checkbox is roughly one focused work session.
+The project grows one release at a time. Every release builds on the one
+before it, so they ship in order; the tasks within a release can be picked up
+in any order. A single task is sized for one focused work session.
 
-## M0 — Foundation
-- [ ] Scaffold Vite + React + TypeScript project
-- [ ] Set up ESLint, Prettier, Vitest, Playwright
-- [ ] GitHub Actions CI: lint, type-check, unit tests on every push
-- [ ] App shell: routing, layout, light/dark theme
-- [ ] Seeded random number generator (reproducible drills for testing)
+---
 
-## M1 — Drill engine
-- [ ] Generic drill runner: countdown, timer, question loop, end screen
-- [ ] Scoring model: accuracy, mean reaction time, consistency
-- [ ] Difficulty settings (easy / normal / hard / custom)
-- [ ] Keyboard input handling shared across drills
+### v0.1 · The groundwork
+Get a solid, tested project skeleton in place.
 
-## M2 — First drills
-- [ ] **Mental Math** — arithmetic generator with aviation-flavored problems
-- [ ] **Heading Finder** — compass rendering + heading calculation
-- [ ] **Callsign Memory** — show/hide sequence, recall input
-- [ ] Unit tests for every generator and scoring function
+- [ ] Scaffold the project with Vite, React and TypeScript
+- [ ] Add ESLint, Prettier, Vitest and Playwright
+- [ ] GitHub Actions CI running lint, type-check and unit tests on every push
+- [ ] Build the app shell: routing, layout, light/dark theme
+- [ ] Write a seeded random number generator so drills are reproducible in tests
 
-## M3 — Progress tracking
-- [ ] Persist session results in IndexedDB
-- [ ] History page with per-drill charts
+### v0.2 · A drill engine
+One shared engine that every drill runs on.
+
+- [ ] Generic drill runner — countdown, timer, question loop, end screen
+- [ ] Scoring model covering accuracy, mean reaction time and consistency
+- [ ] Difficulty settings: easy, normal, hard and custom
+- [ ] Shared keyboard input handling for all drills
+
+### v0.3 · The first three drills
+- [ ] Mental Math, with an aviation-flavored arithmetic generator
+- [ ] Heading Finder, with compass rendering and heading calculation
+- [ ] Callsign Memory, with a show/hide sequence and recall input
+- [ ] Unit tests for every generator and every scoring function
+
+### v0.4 · Remembering progress
+- [ ] Save session results to IndexedDB
+- [ ] History page with charts for each drill
 - [ ] Personal bests and streaks
-- [ ] Export / import results as JSON (backup)
+- [ ] Back up and restore results as JSON (export / import)
 
-## M4 — Radar drills
-- [ ] Canvas radar view: aircraft movement, labels, range rings
-- [ ] **Conflict Watch** — trajectory prediction and separation checks
-- [ ] **Relative Position** — rotating frame-of-reference drill
-- [ ] Performance pass: steady 60 fps on mid-range laptops
+### v0.5 · On the radar
+- [ ] Radar view on canvas — moving aircraft, labels, range rings
+- [ ] Conflict Watch, using trajectory prediction and separation checks
+- [ ] Relative Position, the rotating frame-of-reference drill
+- [ ] Performance pass to hold 60 fps on mid-range laptops
 
-## M5 — Multitasking
-- [ ] **Dual Task** — tracking task + interrupting prompts
-- [ ] Combined "exam simulation" mode chaining several drills
+### v0.6 · Doing two things at once
+- [ ] Dual Task — a tracking task interrupted by prompts
+- [ ] Exam simulation mode that chains several drills together
 
-## M6 — Polish & release
-- [ ] PWA: offline support, installable on desktop and tablet
-- [ ] Accessibility audit (keyboard, contrast, screen reader labels)
-- [ ] Playwright end-to-end tests for each drill
-- [ ] Documentation: drill descriptions, contributing guide
-- [ ] v1.0 release and deploy to GitHub Pages
+### v1.0 · Ready for real use
+- [ ] PWA support: works offline, installable on desktop and tablet
+- [ ] Accessibility audit — keyboard, contrast, screen reader labels
+- [ ] Playwright end-to-end test for each drill
+- [ ] Docs: a description of every drill and a contributing guide
+- [ ] Tag v1.0 and deploy to GitHub Pages
 
-## Ideas / later
-- Adaptive difficulty that adjusts to the user's recent performance
-- Sound cues and simulated radio callouts (text-to-speech)
-- Localization (English, Romanian)
+---
+
+**Someday, maybe:** difficulty that adapts to your recent results · sound cues
+and simulated radio callouts with text-to-speech · English and Romanian
+translations.
