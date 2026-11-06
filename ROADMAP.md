@@ -1,4 +1,4 @@
-# Vector Trainer — release plan
+# ATC Trainer — release plan
 
 The project grows one release at a time. Every release builds on the one
 before it, so they ship in order; the tasks within a release can be picked up
