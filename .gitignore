@@ -11,5 +11,3 @@ test-results/
 !.env.example
 *.sqlite
 *.db
-homepulse.yaml
-!examples/homepulse.yaml
